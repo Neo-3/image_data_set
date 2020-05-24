@@ -1,0 +1,16 @@
+version: "3.8"
+
+services: 
+    jupyter-keras:
+        image: gaarv/jupyter-keras
+        hostname: jupyter_keras
+        container_name: jupyter_keras
+        ports: 
+            - "8888:8888"
+        volumes: 
+            - .:/home/jovyan/work
+        command: "start-notebook.sh \
+        --NotebookApp.token=''"
+
+volumes: 
+    jupyter-keras: ~
